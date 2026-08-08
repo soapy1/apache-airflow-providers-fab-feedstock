@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-fab
-  version: "3.7.3"
+  version: "3.8.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_fab-${{ version }}.tar.gz
-  sha256: a4f34430c1800b55fd18b322146c7453c828ec9bdf2c76e2f8912e05b5d0b6f4
+  sha256: 1d1a86e040ad3bdadcb0fc56e05ee10d3efca5755fb0e66155288f364c170419
 
 build:
   noarch: python
@@ -29,7 +29,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - apache-airflow >=3.0.2
-    - apache-airflow-providers-common-compat >=1.12.0
+    - apache-airflow-providers-common-compat >=1.18.0
     - blinker >=1.6.2
     - flask >=2.2.1
     - flask-appbuilder ==5.2.2
