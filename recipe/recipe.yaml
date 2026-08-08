@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-fab
-  version: "3.7.3"
+  version: 3.8.0
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_fab-${{ version }}.tar.gz
-  sha256: a4f34430c1800b55fd18b322146c7453c828ec9bdf2c76e2f8912e05b5d0b6f4
+  sha256: 1d1a86e040ad3bdadcb0fc56e05ee10d3efca5755fb0e66155288f364c170419
 
 build:
   noarch: python
@@ -29,26 +29,22 @@ requirements:
   run:
     - python >=${{ python_min }}
     - apache-airflow >=3.0.2
-    - apache-airflow-providers-common-compat >=1.12.0
+    - apache-airflow-providers-common-compat >=1.18.0
     - blinker >=1.6.2
     - flask >=2.2.1
     - flask-appbuilder ==5.2.2
     - pyjwt >=2.11.0
-    # more restrictive for python >=3.14
-    - flask-login >=0.6.3
+    - flask-login >=0.6.2
     - flask-session >=0.8.0
     - msgpack-python >=1.0.0
     - flask-sqlalchemy >=3.0.5
-    # more restrictive for python >=3.14
-    - flask-wtf >=1.2.2
+    - flask-wtf >=1.1.0
     - jmespath >=0.7.0
-    # more restrictive for python >=3.14
-    - werkzeug >=3.1.6
+    - werkzeug >=2.2
     - wtforms >=3.0
     - cachetools >=6.0
     - marshmallow >=3
     - flask-limiter >3
-
 tests:
   - python:
       imports:
@@ -56,7 +52,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   homepage: https://github.com/apache/airflow/
