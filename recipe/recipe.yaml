@@ -24,7 +24,6 @@ requirements:
     - pathspec ==1.1.1
     - pluggy ==1.6.0
     # tightest of upstream's floors (python <3.11)
-    # for all python to stay noarch: python
     - tomli ==2.4.1
     - tomlkit ==0.15.1
     - trove-classifiers ==2026.6.1.19
